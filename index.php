@@ -83,7 +83,7 @@
           <h2>İletişim.</h2>
           <hr>
           <div class="temizle"></div>
-          <form method="post" action="https://formspree.io/f/*****">
+          <form method="post" action="https://formspree.io/f/xdovjbko">
             <label for="adsoyad">Ad Soyad</label>
             <input type="text" name="adsoyad" id="adsoyad" required>
 
