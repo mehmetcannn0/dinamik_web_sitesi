@@ -20,11 +20,11 @@
       <aside id="menu">
         <h1>Dinamik<br>Web Sitesi</h1>
         <ul>
-          <li><a href="#anasayfa">Ana Sayfa</a></li>
-          <li><a href="#hakkimizda">Hakkımızda</a></li>
-          <li><a href="#hizmetlerimiz">Hizmetlerimiz</a></li>
-          <li><a href="#projelerimiz">Projelerimiz</a></li>
-          <li><a href="#iletisim">İletişim</a></li>
+          <li><a href="#anasayfa"  onclick="kapat();">Ana Sayfa</a></li>
+          <li><a href="#hakkimizda"  onclick="kapat();">Hakkımızda</a></li>
+          <li><a href="#hizmetlerimiz"  onclick="kapat();">Hizmetlerimiz</a></li>
+          <li><a href="#projelerimiz"  onclick="kapat();">Projelerimiz</a></li>
+          <li><a href="#iletisim"  onclick="kapat();">İletişim</a></li>
         </ul>
       </aside>
 
@@ -83,7 +83,7 @@
           <h2>İletişim.</h2>
           <hr>
           <div class="temizle"></div>
-          <form method="post" action="https://formspree.io/f/xdovjbko">
+          <form method="post" action="https://formspree.io/f/****">
             <label for="adsoyad">Ad Soyad</label>
             <input type="text" name="adsoyad" id="adsoyad" required>
 
@@ -109,17 +109,24 @@
         $("a.resimler").fancybox();
 
         function ac() {
+          if (document.querySelector("body").clientWidth<768) {
+            document.getElementById("menu").style.width = "100%";
+          }
             document.getElementById("menu").style.display = "block";
-            document.getElementById("icerik").style.paddingLeft = "350px";
+            document.getElementById("icerik").style.display = "none";
             document.getElementById("acdgm").style.display = "none";
             document.getElementById("kapatdgm").style.display = "block";
         }
 
         function kapat() {
+          if (document.querySelector("body").clientWidth<768) {
+            
             document.getElementById("menu").style.display = "none";
-            document.getElementById("icerik").style.paddingLeft = "50px";
+            document.getElementById("icerik").style.display = "block";
             document.getElementById("acdgm").style.display = "block";
             document.getElementById("kapatdgm").style.display = "none";
+          }
+       
         }
     </script>  
 
